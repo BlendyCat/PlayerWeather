@@ -1,5 +1,27 @@
-<scm>
-	<connection>scm:git:git@github.com:blendycat/PlayerWeather.git</connection>
-	<url>scm:git:git@github.com:blendycat/PlayerWeather.git</url>
-	<developerConnection>scm:git:git@github.com:blendycat/PlayerWeather.git</developerConnection>
-</scm>
+<repositories>
+	<repository>
+		<id>bukkit-repo</id>
+		<url>http://repo.bukkit.org/content/groups/public/</url>
+	</repository>
+</repositories>
+
+<dependencies>
+	<dependency>
+		<groupId>org.Bukkit</groupId>
+		<artifactId>bukkit</artifactId>
+		<version>LATEST</version>
+	</dependency>
+</dependencies>
+
+<build>
+	<finalName>PlayerWeather</finalName>
+	<sourceDirectory>src/main/java</sourceDirectory>
+	<resource>
+		<targetPath>.</targetPath>
+		<filtering>true</filtering>
+		<directory>${basedir}/src/main/resources/</directory>
+		<includes>
+			<inlcude>plugin.yml</inlcude>
+		</includes>
+	</resource>
+</build>
